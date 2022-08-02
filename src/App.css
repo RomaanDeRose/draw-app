@@ -1,6 +1,10 @@
+body {
+  background-color: #475569;
+}
+
 .draw-container {
-  height: 424px;
-  max-width: 820px;
+  height: 460px;
+  max-width: 850px;
   grid-auto-rows: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 2rem), 1fr));
   overflow: hidden;
@@ -8,6 +12,6 @@
 
 @media screen and (min-width: 768px) {
   .draw-container {
-    height: 480px;
+    height: 552px;
   }
 }

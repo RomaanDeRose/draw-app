@@ -10,7 +10,7 @@ function App() {
   const [color, setColor] = useState("");
 
   const changeColor = (e) => {
-    setColor(e.target.textContent);
+    setColor(e.target.classList[0]);
   };
 
   const download = () => {
@@ -27,7 +27,6 @@ function App() {
 
   return (
     <>
-      <h1>dibuja!</h1>
       <h3 className="flex items-center justify-center gap-2 bg-gray-800 text-white font-bold text-lg w-56 p-3 my-2 mx-auto rounded-lg">
         color activo:
         {color !== "" ? (
@@ -36,15 +35,13 @@ function App() {
           <span className="font-medium text-sm">no hay color...</span>
         )}
       </h3>
-      <ul className="w-full flex flex-wrap justify-center mb-3">
+      <ul className="bg-gray-500 w-4/5 mx-auto rounded-3xl flex flex-wrap justify-center mb-3">
         {colors.map((color, i) => (
           <li
             key={i}
-            className={`${color} text-center w-32 p-1 mx-1 my-2 rounded cursor-pointer`}
+            className={`${color} text-center w-14 h-12 p-1 mx-1 my-2 rounded-full cursor-pointer`}
             onClick={changeColor}
-          >
-            {color}
-          </li>
+          ></li>
         ))}
       </ul>
       <div
@@ -54,7 +51,7 @@ function App() {
         <Box boxes={box} box={setBox} color={color} />
       </div>
       <button
-        className="uppercase font-bold bg-red-600 text-white p-3 my-2 rounded-xl transition-all active:scale-95"
+        className="uppercase font-bold bg-gradient-to-r from-sky-400 to-violet-400 text-white p-3 my-2 rounded-xl transition-all active:scale-95"
         onClick={download}
       >
         descargar
