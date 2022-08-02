@@ -8,6 +8,7 @@ body {
   grid-auto-rows: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 2rem), 1fr));
   overflow: hidden;
+  resize: vertical;
 }
 
 @media screen and (min-width: 768px) {
